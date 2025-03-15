@@ -46,7 +46,7 @@ body {
 
 
 /*MAIN----------------------------------------------------------------------------------------------*/
-main {
+.container-box {
     background: url('images/car-background.png') no-repeat center center/cover;
     height: 100vh;
     display: flex;
@@ -108,6 +108,48 @@ h1 {
 .search-container input::placeholder {
     color: white;
 }
+/*SECOND FEATURE*/
+.quick-search {
+}
+.quick-search-headline{
+    background-color: gray;
+    width: 100%;
+    height: 60px;
+}
+.quick-search h2 {
+    color: black;
+    font-size: 18px;
+    padding-top: 24px;
+    text-align: center;
+}
+
+.car-container {
+    background-color: white;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+.car {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.car img {
+    width: 120px; /* Adjust size */
+    height: auto;
+    border-radius: 5px;
+}
+.car:hover {
+    transform: scale(1.1);
+}
+.car p {
+    margin-top: 5px;
+    color: black;
+}
+
 
 /*MAIN----------------------------------------------------------------------------------------------*/
 
