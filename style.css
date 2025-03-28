@@ -150,6 +150,43 @@ h1 {
     color: black;
 }
 
+/*Third feature*/
+.hero-section {
+    background-image: url('images/Background.png');
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+.hero-section h1 {
+    font-size: 36px;
+}
+.hero-section p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.brands {
+    background: black;
+    padding: 40px 20px;
+    text-align: center;
+}
+.brands h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+.brand-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.brand-logos img {
+    height: 40px;
+    transition: transform 0.3s;
+}
+.brand-logos img:hover {
+    transform: scale(1.1);
+}
+/*Third feature*/
 
 /*MAIN----------------------------------------------------------------------------------------------*/
 
@@ -206,5 +243,8 @@ h1 {
     }
     #hours h3{
         display: none;
+    }
+    .brand-logos img {
+        width: 60px;
     }
 }
