@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperFast Financing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">SP | SUPER FAST <span>TORONTO</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Financing &#9662;</a>
+                </li>
+            </ul>
+            <div class="location-switcher">
+                <span class="location">Toronto</span>
+                <span class="separator">|</span>
+                <span class="location">London</span>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="finance-container">
+        <h1>Finance Calculator</h1>
+        <div class="finance-form">
+            <div class="form-group">
+                <label for="carPrice">Vehicle Price ($):</label>
+                <input type="number" id="carPrice" placeholder="Enter vehicle price">
+            </div>
+            <div class="form-group">
+                <label for="downPayment">Down Payment ($):</label>
+                <input type="number" id="downPayment" placeholder="Enter down payment">
+            </div>
+            <div class="form-group">
+                <label for="loanTerm">Loan Term (months):</label>
+                <select id="loanTerm">
+                    <option value="24">24 months</option>
+                    <option value="36">36 months</option>
+                    <option value="48">48 months</option>
+                    <option value="60">60 months</option>
+                    <option value="72">72 months</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="interestRate">Interest Rate (%):</label>
+                <input type="number" id="interestRate" step="0.01" placeholder="Enter interest rate" value="5.5">
+            </div>
+            <button class="calculate-btn" id="calculateBtn">Calculate Payment</button>
+        </div>
+        
+        <div class="results" id="results">
+            <h2>Your Estimated Payment</h2>
+            <p>Monthly Payment: <span id="monthlyPayment"></span></p>
+            <p>Total Interest: <span id="totalInterest"></span></p>
+            <p>Total Cost: <span id="totalCost"></span></p>
+        </div>
+        
+        <button class="back-btn" onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p class="about-us-text">Our commitment to customer satisfaction is unwavering, from our knowledgeable sales staff to our efficient finance department, we strive to make your car buying experience smooth and enjoyable.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <p>Contact Us: <a href="mailto:SuperFast@gmail.com">SuperFast@gmail.com</a></p>
+                <p>Text Us <a href="tel:+">905-213-5489</a></p>
+                <p>Directions</p>
+            </div>
+            <div class="footer-section" id="hours">
+                <h3>Our Hours</h3>
+                <div class="hours">
+                    <p><strong>Toronto</strong></p>
+                    <p>MON - THU: 10:00 AM - 6:00 PM</p>
+                    <p>FRI - SAT: 10:00 AM - 6:00 PM</p>
+                    <p>Sunday: Closed</p>
+                    <p><strong>London</strong></p>
+                    <p>MON - THU: 10:00 AM - 6:00 PM</p>
+                    <p>FRI - SAT: 10:00 AM - 6:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Super Fast Toronto | Privacy & Policy | Division of Motor Valley | Powered by HB
+        </div>
+    </footer>
+
+    <script src="finance.js"></script>
+</body>
+</html>

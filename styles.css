@@ -1,0 +1,618 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background: #000 url('/images/ferrari.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #f7f7f7;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #f39c12;
+}
+
+.location-switcher {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.location {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.location:hover, .location.active {
+    color: #ffffff;
+}
+
+.separator {
+    color: #555;
+}
+
+/* Main Content Styles */
+.main-container {
+    flex: 1;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slogan-container {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.slogan {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(252, 252, 252, 0.8);
+    line-height: 1.2;
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* search bar styles */
+
+.search-container {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 30px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.search-container input {
+    flex: 1;
+    max-width: 600px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+.search-container button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#searchBtn {
+    background: #f39c12;
+    color: white;
+}
+
+#searchBtn:hover {
+    background: #e67e22;
+}
+
+#resetBtn {
+    background: #555;
+    color: white;
+}
+
+#resetBtn:hover {
+    background: #777;
+}
+
+.no-results {
+    text-align: center;
+    grid-column: 1 / -1;
+    font-size: 1.2rem;
+    color: #f39c12;
+    padding: 40px 0;
+}
+
+/* Car Display Styles */
+.car-display {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 300px;
+}
+
+.car-display h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #f39c12;
+}
+
+.car-display h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #f39c12;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.car-card {
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: #f39c12;
+}
+
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+}
+
+.car-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #f39c12;
+    font-weight: 600;
+}
+
+.car-specs {
+    margin-bottom: 20px;
+}
+
+.car-specs p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+.car-specs strong {
+    color: #fff;
+}
+
+.price {
+    display: block;
+    font-size: 1.4rem;
+    color: #f39c12;
+    font-weight: bold;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.car-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.car-actions button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.buy-btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+.buy-btn:hover {
+    background-color: #2ecc71;
+}
+
+.finance-btn {
+    background-color: #f39c12;
+    color: white;
+}
+
+.finance-btn:hover {
+    background-color: #f1c40f;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: rgba(20, 20, 20, 0.95);
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    border: 1px solid #f39c12;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #f39c12;
+}
+
+.modal-content h2 {
+    color: #f39c12;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-content p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Finance Calculator Styles */
+.finance-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.finance-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #f39c12;
+    font-size: 2rem;
+}
+
+.finance-form-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.finance-form {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(30, 30, 30, 0.8);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ddd;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.calculate-btn,
+.back-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.calculate-btn {
+    background: #f39c12;
+    color: white;
+}
+
+.calculate-btn:hover {
+    background: #e67e22;
+}
+
+.back-btn {
+    background: #555;
+    color: white;
+}
+
+.back-btn:hover {
+    background: #777;
+}
+
+.results {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(30, 30, 30, 0.8);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.results h2 {
+    color: #f39c12;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #444;
+}
+
+.result-item span:first-child {
+    color: #ddd;
+}
+
+.result-item span:last-child {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: rgba(10, 10, 10, 0.95);
+    padding: 40px 30px;
+    margin-top: auto;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    padding: 0 15px;
+}
+
+.footer-section h3 {
+    color: #f39c12;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #f39c12;
+}
+
+.footer-section p {
+    margin: 10px 0;
+    color: #bbb;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-inline-end: 220px;
+}
+.footer-section a {
+    color: #bbb;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-section p:hover {
+    color: #f39c12;
+}
+
+.footer-section a:hover {
+    color: #f39c12;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #888;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .car-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .slogan {
+        font-size: 2.4rem;
+    }
+    
+    .footer {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .search-container input,
+    .search-container button {
+        width: 100%;
+    }
+    
+    .slogan {
+        font-size: 2rem;
+    }
+    
+    .car-display h2 {
+        font-size: 1.8rem;
+    }
+    
+    .car-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+    }
+    
+    .footer-section {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .slogan {
+        font-size: 1.8rem;
+    }
+    
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer-section {
+        min-width: 100%;
+        text-align: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .about-us-text {
+        margin: 0 auto;
+    }
+}

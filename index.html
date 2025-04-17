@@ -3,30 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Connection Toronto</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SuperFast</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">SP | SUPER FAST <span>TORONTO</span></div>
             <ul class="nav-links">
-                <li><a href="#">Home - Talha</a></li>
+                <li><a href="#">Home</a></li>
                 <li class="dropdown">
-                    <a href="#">Inventory &#9662;</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Financing &#9662;</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Trade-in Appraisal &#9662;</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Dealership &#9662;</a>
-                </li>
-                
-                <li class="dropdown">
-                    <a href="#">Directions &#9662;</a>
+                    <a href="finance.html">Financing &#9662;</a>
                 </li>
             </ul>
             <div class="location-switcher">
@@ -36,128 +23,65 @@
             </div>
         </nav>
     </header>
-    <!--main-->
-    <main>
-        <div class="container-box">    
-            <div class="container">
-                <div class="background-overlay">
-                    <h1>Welcome To Car Connection Toronto</h1>
-                    <div class="search-container">
-                        <input type="text" placeholder="Search...">
-                        <select>
-                            <option>All Location</option>
-                        </select>
-                        <select>
-                            <option>Make</option>
-                        </select>
-                        <select>
-                            <option>Model</option>
-                        </select>
-                        <select>
-                            <option>Year</option>
-                        </select>
-                        <button>Search</button>
-                    </div>
+    <div class="container">
+        <div class="inner-container">
+            <div class="slogan-container">
+                <h1 class="slogan">Unleash the Power.<br>Drive SuperFast!</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search by make, model, body style...">
+                <button id="searchBtn">Search</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+            <!-- <button class="view-inventory-btn" onclick="displaySampleCar()">View Our Inventory</button> -->
+            <div id="carDisplay" class="car-display">
+                <h2></h2>
+                <div class="car-grid" id="carGrid">
+                    <!-- Cars will be inserted here by JavaScript -->
                 </div>
             </div>
-        </div>
-    
-        <div class="quick-search">
-            <div class="quick-search-headline">
-                <h2>QUICK SEARCH</h2>
-            </div>
-            
-            <div class="car-container">
-                <div class="car" onclick="location.href='sedan.html'">
-                    <img src="/images/sedan.png" alt="Sedan">
-                    <p>Sedan</p>
-                </div>
-                <div class="car" onclick="location.href='coupe.html'">
-                    <img src="/images/coupe.png" alt="Coupe">
-                    <p>Coupe</p>
-                </div>
-                <div class="car" onclick="location.href='convertible.html'">
-                    <img src="/images/coupe.png" alt="Convertible">
-                    <p>Convertible</p>
-                </div>
-                <div class="car" onclick="location.href='suv.html'">
-                    <img src="/images/suv.png" alt="SUV">
-                    <p>SUV</p>
-                </div>
-                <div class="car" onclick="location.href='minivan.html'">
-                    <img src="/images/minivan.png" alt="Minivan">
-                    <p>Minivan/Van</p>
-                </div>
-                <div class="car" onclick="location.href='truck.html'">
-                    <img src="/images/truck.png" alt="Truck">
-                    <p>Truck</p>
-                </div>
-            </div>
-        </div>
-    </main>
-
-
-    <!--Third Feature-->
-    <div class="hero-section">
-        <h1>Welcome to Car Connection Toronto</h1>
-        <p>One of North York’s largest pre-owned dealerships! Competitive prices & fast approvals.</p>
-        <p>Contact us today to schedule a test drive.</p>
-        <p>For inquiries, call us at <strong>+1-888-541-8764</strong></p>
-    </div>
-    <div class="brands">
-        <h2>QUICK SEARCH BY MAKE</h2>
-        <div class="brand-logos">
-            <img src="/images/img_cars_quicksearch/acura.png" alt="Acura">
-            <img src="/images/img_cars_quicksearch/audi.png" alt="Audi">
-            <img src="/images/img_cars_quicksearch/ford.png" alt="Ford">
-            <img src="/images/img_cars_quicksearch/hyundai.png" alt="Hyundai">
-            <img src="/images/img_cars_quicksearch/mazda.png" alt="Mazda">
-            <img src="/images/img_cars_quicksearch/mitsubishi.png" alt="Mitsubishi">
-            <img src="/images/img_cars_quicksearch/chevrolet.png" alt="Chevrolet">
-            <img src="/images/img_cars_quicksearch/volkswagen.png" alt="Volkswagen">
-            <img src="/images/img_cars_quicksearch/nissan.png" alt="Nissan">
-            <img src="/images/img_cars_quicksearch/toyota.png" alt="Toyota">
         </div>
     </div>
-    <!--Third Feature-->
 
-    <!--Main-->
+    <!-- Buy Confirmation po -->
+    <div id="buyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Thank You!</h2>
+            <p>Your selected car is being reserved. Our team will contact you shortly to complete the purchase process.</p>
+        </div>
+    </div>
+
     <footer>
-        <div class="footer">
+        <div class="footer-content">
             <div class="footer-section">
                 <h3>About Us</h3>
-                <p class="about-us-text">Our commitment to customer satisfaction is unwavering, from our knowledgeable sales staff to our efficient finance department, we strive to make your car buying experience smooth and enjoyable.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Company</h3>
-                <p>About Us</p>
-                <p>Book an Appointment</p>
-                <p>Car Finder</p>
+                <p class="about-us-text">Our commitment to customer satisfaction is unwavering, from our knowledgeable sales staff to our efficient finance department.</p>
             </div>
             <div class="footer-section">
                 <h3>Support</h3>
-                <p>Contact Us</p>
-                <p>Text Us</p>
-                <p>Directions</p>
+                <p>Contact Us: <a href="mailto:SuperFast@gmail.com">SuperFast@gmail.com</a></p>
+                <p>Text Us <a href="tel:+">905-213-5489</a></p>
             </div>
             <div class="footer-section" id="hours">
                 <h3>Our Hours</h3>
                 <div class="hours">
                     <p><strong>Toronto</strong></p>
-                    <p>MON - THU: 10:00 AM - 6:00 PM</p>
-                    <p>FRI - SAT: 10:00 AM - 6:00 PM</p>
+                    <p>MON-THU: 10AM-6PM</p>
+                    <p>FRI-SAT: 10AM-6PM</p>
                     <p>Sunday: Closed</p>
                     <p><strong>London</strong></p>
-                    <p>MON - THU: 10:00 AM - 6:00 PM</p>
-                    <p>FRI - SAT: 10:00 AM - 6:00 PM</p>
+                    <p>MON-THU: 10AM-6PM</p>
+                    <p>FRI-SAT: 10AM-6PM</p>
                     <p>Sunday: Closed</p>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2025  Super Fast Toronto | Privacy & Policy | Division of Motor Valley | Powered by HB
+            &copy; 2025 Super Fast Toronto | Privacy & Policy | Division of Motor Valley | Powered by HB
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
